@@ -17,3 +17,6 @@ FVTTのシステム [ソード・ワールド2.5](https://github.com/jeannjeann/
 ``` 
 https://github.com/lunachil32/sw25-movement-ruler/releases/latest/download/module.json
  ```
+## 免責事項
+
+開発者は当ツールを利用した上で生じたよるいかなる損失や損害、賠償要求に対して、その責任を一切負わないものとします。
