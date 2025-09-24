@@ -4,4 +4,6 @@
 
 モジュールインストーラー下部のテキストフィールドに URL をコピーしてインストール
 
-``` https://github.com/lunachil32/sw25-movement-ruler/releases/latest/download/module.json ```
+``` 
+https://github.com/lunachil32/sw25-movement-ruler/releases/latest/download/module.json
+ ```
