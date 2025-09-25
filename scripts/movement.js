@@ -31,9 +31,7 @@ function getLimitedMove(ruler) {
 function getNormalMove(ruler) {
   const actor = ruler?.token?.actor;
   const mv = foundry.utils.getProperty(actor, "system.attributes.move.normal");
-  const mvMod = foundry.utils.getProperty(actor, "system.attributes.move.movemod");
-  const efMvMod = foundry.utils.getProperty(actor, "system.attributes.move.efmovemod");
-  return Number(mv) + Number(mvMod) + Number(efMvMod);
+  return Number(mv);
 }
 
 function getMaxMove(ruler) {
