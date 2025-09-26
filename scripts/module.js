@@ -1,5 +1,5 @@
 import { ModuleId, SettingIds } from "./consts.js";
-import { RegisterSettings } from "./setting.js";
+import { RegisterSettings } from "./worldSettings.js";
 import { NowInRange } from "./movement.js";
 
 Hooks.once("init", () => 
