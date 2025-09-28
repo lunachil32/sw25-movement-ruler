@@ -9,7 +9,7 @@ export function RegisterActorSettingsHook() {
       label: "移動情報",
       class: "movement-editor",
       icon: "fas fa-shoe-prints",
-      onclick: () => new MovementStandardForm(actor).render(true)//openMovementDialog(actor)
+      onclick: () => new MovementStandardForm(actor).render(true)
     });
   });
 }
