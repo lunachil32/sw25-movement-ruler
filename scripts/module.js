@@ -1,10 +1,12 @@
 import { ModuleId, SettingIds } from "./consts.js";
 import { RegisterSettings } from "./worldSettings.js";
+import { RegisterActorSettingsHook } from "./actorSettings.js";
 import { NowInRange } from "./movement.js";
 
 Hooks.once("init", () => 
     {
         RegisterSettings();
+        RegisterActorSettingsHook();
 
         libWrapper.register(
             ModuleId,

@@ -1,0 +1,50 @@
+<form class="flexcol standard-form movement-form">
+  <section class="actor-movement-section">
+    <ol class="actor-movement-list">
+
+      <li class="actor-movement-header">
+        <div class="actor-movement-name-cell">
+          <i class="fas fa-shoe-prints"></i>
+          <span class="actor-movement-title">移動方法</span>
+        </div>
+        <div class="actor-movement-controls">
+          <a class="actor-movement-control mm-add" title="新規"><i class="fas fa-plus"></i> 新規</a>
+        </div>
+      </li>
+
+
+      {{#each entries}}
+      <li class="actor-movement-row" data-name="{{this.name}}">
+        <div class="actor-movement-name-cell">
+          <img class="actor-movement-image" src="icons/svg/wing.svg" alt=""/>
+          <input type="text" class="mm-name" value="{{this.name}}" placeholder="移動方法名"/>
+        </div>
+
+        <div class="actor-movement-detail">
+          <label>移動力</label>
+          <input type="number" class="mm-speed" min="0" step="1" value="{{this.speed}}"/>
+        </div>
+
+        <div class="actor-movement-controls">
+          <a class="actor-movement-control mm-delete" title="削除"><i class="fas fa-trash"></i></a>
+        </div>
+      </li>
+      {{/each}}
+    </ol>
+
+    <div class="form-group">
+      <label>有効な移動方法</label>
+      <div class="form-fields">
+        <select class="mm-active">
+          {{#each entries}}
+            <option value="{{this.name}}" {{#if (eq ../active this.name)}}selected{{/if}}>{{this.name}}</option>
+          {{/each}}
+        </select>
+      </div>
+    </div>
+  </section>
+  <footer class="sheet-footer flexrow">
+    <button type="submit" class="mv-save"><i class="fas fa-save"></i> 保存</button>
+    <button type="button" data-action="cancel">キャンセル</button>
+  </footer>
+</form>
