@@ -21,7 +21,7 @@ function isAllowedActor(actor) {
   return !!actor && ALLOWED_TYPES.has(actor.type);
 }
 
-function getFlagsMovement(actor) {
+export function GetFlagsMovement(actor) {
   const v = actor.getFlag(ModuleId, "movement") ?? DEFAULT_MOVEMENTS;
 
   const list = {};
@@ -79,7 +79,7 @@ class MovementStandardForm extends FormApplication {
   get title() { return `移動情報 - ${this.object.name}`; }
 
   async getData() {
-    const { active, list } = getFlagsMovement(this.object);
+    const { active, list } = GetFlagsMovement(this.object);
     return { active, entries: Object.entries(list).map(([name, speed]) => ({ name, speed })) };
   }
 
