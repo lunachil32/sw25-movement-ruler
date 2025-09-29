@@ -7,3 +7,4 @@ export const SettingIds =
     over: 'overColor',
     highlight: 'highlightAlpha',
 }
+export const SerializeVersion = "v0.2.0"
