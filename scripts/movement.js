@@ -22,7 +22,7 @@ export function NowInRange(ruler, waypoint, epsilon = 1e-6){
         if (movement.active == null || movement.list.length === 0 ) return 'over';
 
         let moveMod = getEfMoveMod(actor);
-        if (isNaN(moveMode)) moveMod = 0;
+        if (isNaN(moveMod)) moveMod = 0;
 
         limited = 3;
         normal = movement.list[movement.active] + moveMod;
