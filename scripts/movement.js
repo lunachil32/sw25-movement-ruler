@@ -21,8 +21,11 @@ export function NowInRange(ruler, waypoint, epsilon = 1e-6){
         // 移動情報が存在しない場合は over 扱いにしておく
         if (movement.active == null || movement.list.length === 0 ) return 'over';
 
+        let moveMod = getEfMoveMod(actor);
+        if (isNaN(movemMode)) moveMod = 0;
+
         limited = 3;
-        normal = movement.list[movement.active];
+        normal = movement.list[movement.active] + moveMod;
         max = normal * 3;
     }
 
@@ -46,6 +49,11 @@ function getNormalMove(actor) {
 
 function getMaxMove(actor) {
     const mv = foundry.utils.getProperty(actor, "system.attributes.move.max");
+    return Number(mv);
+}
+
+function getEfMoveMod(actor) {
+    const mv = foundry.utils.getProperty(actor, "system.attributes.move.efmovemod");
     return Number(mv);
 }
 
