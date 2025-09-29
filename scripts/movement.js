@@ -13,11 +13,11 @@ export function NowInRange(ruler, waypoint, epsilon = 1e-6){
     let normal = getNormalMove(actor);
     let max = getMaxMove(actor);
 
-    // モンスター、NPC
+    // システム側に移動情報が存在しない場合(モンスター、NPC)
     if (!Number.isFinite(limited) || limited <= 0) 
     {
         const movement = GetFlagsMovement(actor);
-        
+
         // 移動情報が存在しない場合は over 扱いにしておく
         if (movement.active == null || movement.list.length === 0 ) return 'over';
 
