@@ -1,0 +1,89 @@
+.movement-app .actor-movement-section {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+}
+
+.movement-app .sheet-footer {
+  flex: 0 0 auto;
+  padding: 8px;
+  border-top: 1px solid var(--color-border-light-tertiary);
+}
+.movement-app .actor-movement-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+
+  border-top: 1px solid var(--color-border-light-primary);
+  border-bottom: 1px solid var(--color-border-light-tertiary);
+
+  font-weight: 700;
+}
+
+.movement-app .actor-movement-title {
+  font-size: var(--font-size-14, 14px);
+}
+
+.movement-app .actor-movement-controls {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.movement-app .actor-movement-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.movement-app .actor-movement-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--color-border-light-tertiary);
+}
+.movement-app .actor-movement-row:last-child {
+  border-bottom: 0;
+}
+
+.movement-app .actor-movement-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+.movement-app .actor-movement-name-cell input[type="text"] {
+  width: 14rem;
+  max-width: 100%;
+}
+
+.movement-app .actor-movement-detail input[type="number"] {
+  width: 4.5em;
+}
+
+.movement-app .actor-movement-image {
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--color-border-light-tertiary);
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+.movement-app .actor-movement-detail {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.movement-app .actor-movement-controls .actor-movement-control {
+  cursor: pointer;
+}
+
+.movement-app .form-group {
+  margin-top: 8px;
+}
