@@ -7,6 +7,10 @@
     "authors": [{ "name": "opabinia" }],
     "esmodules": ["scripts/module.js"],
     "styles": ["styles/actor-movement.css"],
+    "languages": [
+        { "lang": "en", "name": "English", "path": "lang/en.json" },
+        { "lang": "ja", "name": "日本語",   "path": "lang/ja.json" }
+    ],
     "relationships": {
         "systems": [
         {

@@ -1,0 +1,29 @@
+{
+  "SW25MovementRuler": {
+    "Menu": {
+      "Title": "移動ルーラーの色設定",
+      "Open": "開く"
+    },
+    "Settings": {
+      "MovementInfoTitle": "移動情報 - {name}",
+      "MovementInfo": "移動情報",
+      "MovementName": "移動方法名",
+      "Movement": "移動力",
+      "ActiveMovement": "有効な移動方法",
+      "Create": "新規",
+      "Delete": "削除",
+      "Limited": "制限移動",
+      "Normal": "通常移動",
+      "Max": "最大移動",
+      "Over": "超過",
+      "Highlight": "ハイライト透過",
+      "Save": "保存",
+      "Cancel": "キャンセル"
+    },
+    "Msg": {
+      "Saved": "設定を保存しました。",
+      "ErrorDuplicate": "移動方式「{name}」が重複しています。",
+      "SavedMovement": "移動情報を保存しました"
+    }
+  }
+}
