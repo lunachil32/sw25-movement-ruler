@@ -1,3 +1,5 @@
+([English](docs/README-en.md))
+
 # Sword world 2.5 movement ruler
 
 ![Foundry v13](https://img.shields.io/badge/foundry-v13-green)
