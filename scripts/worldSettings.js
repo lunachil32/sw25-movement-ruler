@@ -1,11 +1,12 @@
 import { ModuleId, SettingIds } from "./consts.js";
+import { L10N } from "./translator.js";
 
 class MovementColorMenu extends foundry.applications.api.ApplicationV2 {
   static get DEFAULT_OPTIONS() {
     return {
         id: `${ModuleId}-color-menu`,
         tag: "form",
-        window: { title: "移動ルーラーの色設定" },
+        window: { title: L10N("Menu.Title") },
         actions: { submit: MovementColorMenu.onSubmit }
     };
   }
@@ -59,7 +60,7 @@ class MovementColorMenu extends foundry.applications.api.ApplicationV2 {
     await game.settings.set(ModuleId, SettingIds.max, maxColor);
     await game.settings.set(ModuleId, SettingIds.over, overColor);
     await game.settings.set(ModuleId, SettingIds.highlight, Number(highlightAlpha));
-    ui.notifications.info("色設定を保存しました");
+    ui.notifications.info(L10N("Msg.Saved"));
   }
 }
 
@@ -78,8 +79,8 @@ export async function RegisterSettings(){
     game.settings.register(ModuleId, SettingIds.highlight,  { scope: "client", config: false, type: Number,  default: 0.35 });
 
     game.settings.registerMenu(ModuleId, "colorMenu", {
-    name: "移動ルーラーの色設定",
-    label: "開く",
+    name: L10N("Menu.Title"),
+    label: L10N("Menu.Open"),
     icon: "fas fa-palette",
     scope: "client",
     type: MovementColorMenu

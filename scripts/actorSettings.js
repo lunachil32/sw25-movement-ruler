@@ -1,4 +1,5 @@
 import { ModuleId, SerializeVersion } from "./consts.js";
+import { L10N, L10NFormat } from "./translator.js";
 
 export function RegisterActorSettingsHook() {
   Hooks.on("getActorSheetHeaderButtons", (sheet, buttons) => {
@@ -6,7 +7,7 @@ export function RegisterActorSettingsHook() {
     if (!isAllowedActor(actor)) return;
 
     buttons.unshift({
-      label: "移動情報",
+      label: L10N("Settings.MovementInfo"),
       class: "movement-editor",
       icon: "fas fa-shoe-prints",
       onclick: () => new MovementStandardForm(actor).render(true)
@@ -47,7 +48,7 @@ async function setFlagsMovement(actor, values) {
       .filter(Boolean);
   const seen = new Set();
   for (const name of names) {
-    if (seen.has(name)) throw new Error(`移動方式が重複しています: ${name}`);
+    if (seen.has(name)) throw new Error(L10NFormat("Msg.ErrorDuplicate", {name: name}));
     seen.add(name);
     const n = Number(values.list[name]);
     norm[name] = Math.max(0, Number.isFinite(n) ? n : 0);
@@ -76,7 +77,7 @@ class MovementStandardForm extends FormApplication {
     });
   }
 
-  get title() { return `移動情報 - ${this.object.name}`; }
+  get title() { return L10NFormat("Settings.MovementInfoTitle", {name: this.object.name}); }
 
   async getData() {
     const { active, list } = GetFlagsMovement(this.object);
@@ -92,7 +93,7 @@ class MovementStandardForm extends FormApplication {
   async _updateObject(event, formData) {
     const { active, list } = collectFromForm(this.element);
     await setFlagsMovement(this.object, { active, list });
-    ui.notifications.info("移動情報を保存しました");
+    ui.notifications.info(L10N("Msg.SavedMovement"));
   }
 }
 
@@ -106,14 +107,14 @@ function attachHandlers(root) {
       <li class="actor-movement-row">
         <div class="actor-movement-name-cell">
           <img class="actor-movement-image" src="icons/svg/wing.svg" alt=""/>
-          <input type="text" class="mm-name" placeholder="移動方法名"/>
+          <input type="text" class="mm-name" placeholder="${L10N("Settings.MovementName")}"/>
         </div>
         <div class="actor-movement-detail">
-          <label>移動力</label>
+          <label>${L10N("Settings.Movement")}</label>
           <input type="number" class="mm-speed" min="0" step="1" value="0"/>
         </div>
         <div class="actor-movement-controls">
-          <a class="actor-movement-control mm-delete" title="削除"><i class="fas fa-trash"></i></a>
+          <a class="actor-movement-control mm-delete" title="${L10N("Settings.Delete")}"><i class="fas fa-trash"></i></a>
         </div>
       </li>
     `);
