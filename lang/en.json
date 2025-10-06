@@ -1,0 +1,29 @@
+{
+  "SW25MovementRuler": {
+    "Menu": {
+      "Title": "Movement Ruler Colors",
+      "Open": "Open"
+    },
+    "Settings": {
+      "MovementInfoTitle": "Movement - {name}",
+      "MovementInfo": "Movement",
+      "MovementName": "Movement Name",
+      "Movement": "Movement",
+      "ActiveMovement": "Active Movement",
+      "Create": "Create",
+      "Delete": "Delete",
+      "Limited": "Limited",
+      "Normal": "Normal",
+      "Max": "Max",
+      "Over": "Over",
+      "Highlight": "Highlight alpha",
+      "Save": "Save",
+      "Cancel": "Cancel"
+    },
+    "Msg": {
+      "Saved": "Settings saved.",
+      "ErrorDuplicate": "Movement name \"{name}\" is duplicated.",
+      "SavedMovement": "Movement saved"
+    }
+  }
+}

@@ -1,26 +1,26 @@
 
 <div class="form-group">
-<label>制限移動</label>
+<label>{{localize "SW25MovementRuler.Settings.Limited"}}</label>
 <color-picker name="limitedColor" value="{{limitedColor}}" default="#0088ff"></color-picker>
 </div>
 <div class="form-group">
-<label>通常移動</label>
+<label>{{localize "SW25MovementRuler.Settings.Normal"}}</label>
 <color-picker name="normalColor" value="{{normalColor}}" default="#00ff88"></color-picker>
 </div>
 <div class="form-group">
-<label>全力移動</label>
+<label>{{localize "SW25MovementRuler.Settings.Max"}}</label>
 <color-picker name="maxColor" value="{{maxColor}}" default="#ff8800"></color-picker>
 </div>
 <div class="form-group">
-<label>超過</label>
+<label>{{localize "SW25MovementRuler.Settings.Over"}}</label>
 <color-picker name="overColor" value="{{overColor}}" default="#ff0066"></color-picker>
 </div>
 <div class="form-group">
-<label>ハイライト透明度（0〜1）</label>
+<label>{{localize "SW25MovementRuler.Settings.Highlight"}}（0〜1）</label>
 <input type="range" name="highlightAlpha" min="0" max="1" step="0.05" value="{{highlightAlpha}}">
 <span class="range-value">{{highlightAlpha}}</span>
 </div>
 <footer class="sheet-footer flexrow">
-<button type="submit" data-action="submit" class="default">保存</button>
+<button type="submit" data-action="submit" class="default">{{localize "SW25MovementRuler.Settings.Save"}}</button>
 </footer>
 
