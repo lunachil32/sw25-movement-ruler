@@ -14,7 +14,8 @@ FVTTのシステム [ソード・ワールド2.5](https://github.com/jeannjeann/
 
 ## 導入方法
 
-モジュールインストーラー下部のテキストフィールドに URL をコピーしてインストール
+モジュールインストーラーで `Sword world 2.5 movement ruler` を検索してインストール
+または、モジュールインストーラー下部のテキストフィールドに URL をコピーしてインストール
 
 ``` 
 https://github.com/lunachil32/sw25-movement-ruler/releases/latest/download/module.json
