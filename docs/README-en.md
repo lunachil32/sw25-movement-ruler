@@ -12,7 +12,8 @@ When you move a token, the measured path on the ruler is color-coded in four tie
 
 ## Installation
 
-Paste the following URL into the text field at the bottom of the Module Installer and install:
+Search for and install “Sword World 2.5 Movement Ruler” in the module installer.  
+Alternatively, paste the following URL into the text field at the bottom of the Module Installer and install:
 
 ``` 
 https://github.com/lunachil32/sw25-movement-ruler/releases/latest/download/module.json
