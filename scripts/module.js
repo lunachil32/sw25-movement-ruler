@@ -16,7 +16,7 @@ Hooks.once("init", () =>
                 const colorId = SettingIds[NowInRange(this, waypoint)];
                 const hex = foundry.utils.Color.fromString(game.settings.get(ModuleId, colorId));
                 style.color = hex;
-                style.alpha ??= 1.0;
+                style.alpha = Math.clamp( game.settings.get(ModuleId, SettingIds.highlight), 0, 1);
                 return style;
             },
             "WRAPPER");
@@ -29,7 +29,7 @@ Hooks.once("init", () =>
                 const colorId = SettingIds[NowInRange(this, waypoint)];
                 const hex = foundry.utils.Color.fromString(game.settings.get(ModuleId, colorId));
                 style.color = hex;
-                style.alpha ??= 1.0;
+                style.alpha = Math.clamp( game.settings.get(ModuleId, SettingIds.highlight), 0, 1);
                 return style;
             },
             "WRAPPER"
