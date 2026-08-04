@@ -2,7 +2,7 @@
     "id": "sw25-movement-ruler",
     "title": "Sword World 2.5 Movement Ruler",
     "description": "A ruler that changes color depending on the character's movement.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "compatibility": { "minimum": 13, "verified": 13 },
     "authors": [{ "name": "opabinia" }],
     "esmodules": ["scripts/module.js"],
@@ -16,9 +16,9 @@
         {
             "id": "sw25",
             "type": "system",
-            "manifest": "https://github.com/jeannjeann/sw25-fvtt/releases/download/2.3.1/system.json",
+            "manifest": "https://github.com/jeannjeann/sw25-fvtt/releases/download/2.4.1/system.json",
             "compatibility": {
-            "verified": "2.3.1"
+            "verified": "2.4.1"
             }
         }
         ],
@@ -35,5 +35,5 @@
     },
     "url": "https://github.com/lunachil32/sw25-movement-ruler.git",
     "manifest": "https://github.com/lunachil32/sw25-movement-ruler/releases/latest/download/module.json",
-    "download": "https://github.com/lunachil32/sw25-movement-ruler/releases/download/v1.0.0/sw25-movement-ruler.v1.0.0.zip"
+    "download": "https://github.com/lunachil32/sw25-movement-ruler/releases/download/v1.0.1/sw25-movement-ruler.v1.0.1.zip"
 }
