@@ -3,7 +3,7 @@
 # Sword world 2.5 movement ruler
 
 ![Foundry v13](https://img.shields.io/badge/foundry-v13-green)
-![Supported Game Systems](https://img.shields.io/badge/SupportedGameSystem-SwordWorld2.5v2.3.1-green)
+![Supported Game Systems](https://img.shields.io/badge/SupportedGameSystem-SwordWorld2.5v2.4.1-green)
 
 ## これは何？
 
